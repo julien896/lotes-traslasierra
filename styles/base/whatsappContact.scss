@@ -1,0 +1,17 @@
+.anticon-whats-app {
+    color: white !important; 
+    background: rgba(37, 211, 102, 0.8);
+    border-radius: 50%;
+    position: fixed; 
+    font-size: 80px; 
+    left: 90%;
+    top: 80%;
+    z-index: 30;
+    transition: 1s ease
+}
+
+@media (max-width: 950px) {
+    .anticon-whats-app {
+        font-size: 60px; 
+    }
+  }

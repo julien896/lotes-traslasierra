@@ -1,0 +1,86 @@
+.rooms-container {
+    background-color: rgb(255, 218, 63);
+    display: flex;
+    width: 100%;
+
+    & .text {
+        padding: 40px 0 40px 0;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & .ant-btn {
+            background-color: transparent;
+            border-radius: 4px;
+            border: 1px solid white;
+            color: white;
+            font-size: 18px;
+            height: 40px;
+            width: 240px;
+            transition: all 600ms ease;
+        }
+
+        & button:hover {
+            background: white;
+            color: #222222;
+        }
+
+        & h2 {
+            font-size: 30px;
+            color: white;
+        }
+    }
+
+    & .carousel {
+        width: 65%;
+
+        & .awssld__controls button {
+            background: rgba(255, 255, 255, 0.7) !important;
+            border-radius: 30px;
+            height: 40px !important;
+            width: 40px !important;
+            align-items: center;
+            display: flex;
+        }
+
+        & .awssld__next {
+            justify-content: flex-start !important;
+            margin-right: 10px !important;
+        }
+
+        & .awssld__prev {
+            justify-content: flex-end !important;
+            margin-left: 10px !important;
+        }
+
+        & .awssld__controls__arrow-left, .awssld__controls__arrow-right {
+            height: 15px !important;
+            display: flex !important;
+            width: 15px !important;
+        }
+
+        & .awssld__bullets {
+            display: none !important;
+        }
+
+        & img {
+            filter: brightness(0.8);
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .rooms-container {
+        flex-direction: column;
+
+        & .text {
+            width: 100%;
+        }
+
+        & .carousel {
+            width: 100%;
+        }
+    }
+  }

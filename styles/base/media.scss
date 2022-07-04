@@ -1,0 +1,35 @@
+.media {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0px;
+    background: $gray-1;
+    padding-left: 5px;
+    padding-right: 2px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    top: 35%;
+    z-index: 9999999;
+    visibility: visible;
+
+    & .anticon {
+        font-size: 30px;
+        opacity: .8;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+    & .anticon-facebook {
+        color: #000f4a !important;
+        margin-top: 5px;
+    }
+    & .anticon-instagram {
+        color: #e0452c !important;
+    }
+    & .anticon-mail {
+        color: #2374E1 !important
+    }
+}

@@ -1,0 +1,19 @@
+.scroll-btn {
+    position: fixed !important; 
+    font-size: 180px; 
+    right: 0px;
+    border: none !important;
+    width: 45px;
+    height: 45px !important;
+    background: rgba(0,0,0,0.6) !important;
+    top: 80%;
+    z-index: 9999999;
+    transition: 1s ease;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    &:hover {
+        background: $black !important;
+    }
+}

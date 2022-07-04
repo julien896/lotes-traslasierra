@@ -1,0 +1,100 @@
+.home-card {
+    & .container {
+        & .slider-item {
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        .awssld__wrapper {
+            max-height: 500px;
+        }
+        .awssld {
+            --control-bullet-active-color: $blue !important;
+            --loader-bar-color: $blue !important;
+            --organic-arrow-color: transparent;
+            --control-button-background: transparent;
+            --control-bullet-color: transparent;
+
+            & .text {
+                padding: 20px;
+                border-radius: 2px;
+                font-size: 25px;
+                background: rgba(0, 0, 0, 0.5); 
+                max-width: 450px;
+                color: white;
+            }
+        }
+        /* facebook-light: #000f4a 
+        facebook-dark: #2374E1
+
+        ig-light: #e0452c
+        */
+/*         & .media {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            right: 0px;
+            background: $gray-1;
+            padding-left: 5px;
+            padding-right: 2px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            top: 35%;
+            z-index: 9999999;
+            visibility: visible;
+
+            & .anticon {
+                font-size: 30px;
+                opacity: .8;
+                margin-bottom: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            & .anticon-facebook {
+                color: #000f4a !important;
+                margin-top: 5px;
+            }
+            & .anticon-instagram {
+                color: #e0452c !important;
+            }
+            & .anticon-mail {
+                color: #2374E1 !important
+            }
+        } */
+    }
+}
+       /*  & .welcome {
+            height: 100%;
+            color: white !important;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            & h2 {
+                color: white !important;
+                font-size: 80px;
+                margin-bottom: 20px !important;
+            }
+
+            & span {
+                font-size: 25px;
+            }
+        }
+    }
+}
+@media (max-width: 950px) {
+    .welcome {
+        & h2 {
+            font-size: 60px !important;
+        }
+
+        & span {
+            font-size: 22px !important;
+        }
+    }
+  } */

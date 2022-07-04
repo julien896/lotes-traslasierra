@@ -1,0 +1,111 @@
+.us-container {
+    width: 100%;
+    padding: 80px 30px;
+    display: flex;
+    background:$gray-1;
+
+    & .image {
+        width: 53%;
+        margin-right: 20px;
+        height: 500px;
+
+        & .invert, .normal {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+        }
+    }
+    & .data {
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+
+        & .img {
+          display: flex;
+          align-items: center;
+
+        & .logo {
+            width: 80px;
+            height: 80px;
+        }
+        & .title {
+            font-size: 35px !important;
+            width: 30%;
+            margin-left: 10px;
+            height: 55px;
+            color: $black;
+            border-bottom: 1.5px solid $blue;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            font-weight: 600;
+        }
+      }
+
+        & .description {
+            margin-top: 30px;
+            font-weight: 600;
+            font-size: 17px;
+            color: $gray-3;
+        }
+
+        & a {
+          color: $blue;
+        }
+    }
+}
+
+.image {
+    animation: blur 5s infinite alternate;
+    height: 90vw;
+    max-height: 640px;
+    max-width: 640px;
+    position: relative;
+    width: 90vw;
+    & div{
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }  
+
+      & .normal{
+        background-size: cover;
+      }
+      
+      & .invert{
+        animation: mask 5s steps(69) infinite alternate;
+        background-size: cover;
+        filter: invert(1.0) grayscale(1.0);
+        -webkit-mask: url('/public/assets/3.jpg');
+        -webkit-mask-size: 7000% 100%;
+        mask: url('/public/assets/2.jpg');
+        mask-size: 7000% 100%;
+      }
+}
+  
+  @keyframes blur{
+    from{
+      filter: blur(3px);
+      opacity: 0;
+    }
+    to{
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes mask{
+    from{
+        -webkit-mask-position: 0% 0;
+        mask-position: 0% 0;
+    }
+    to{
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+  }
+

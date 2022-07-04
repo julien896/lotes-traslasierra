@@ -1,0 +1,99 @@
+.presentation-container {
+    width: 100%;
+    display: flex;
+    background: $black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+     & .text {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         padding-left: 30px;
+         padding-right: 30px;
+
+         & div {
+             display: flex;
+         }
+
+         & .description {
+             font-size: 17px;
+             color: $gray-2;
+         }
+
+         & .hotel {
+             color: $gray-2;
+             font-size: 30px;
+             font-weight: 500;
+         }
+     }
+
+     & .images {
+         width: 65%;
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: repeat(2, 1fr);
+         grid-gap: 0.5rem;
+     
+         & .image {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             & span { 
+                 width: 96% !important;
+                 height: 96% !important;
+             }
+            & img {
+                height: 100% !important;
+                width: 100% !important;
+                object-fit: cover;
+                filter: brightness(70%) contrast(150%) saturate(0%) brightness(150%);
+                transition: cubic-bezier(1, 0, 0, 1);
+                border-radius: 2px
+              };
+     
+              & :hover {
+                  filter: none;
+                  transition: 1s ease 
+              }
+         }
+        }
+}
+
+@media (max-width: 950px) {
+    .presentation-container {
+        flex-direction: column;
+
+        & .text {
+            width: 100%;
+
+            & div {
+                justify-content: center;
+            }
+            & .us {
+                font-size: 23px;
+    
+             }
+    
+             & .description {
+                text-align: center;
+                font-size: 15px;
+             }
+    
+             & .hotel {
+                 font-size: 32px;
+             }
+        }
+
+        & .images {
+            width: 100%;
+            margin-top: 20px;
+
+            & .image {
+                max-width: 220px;
+                max-height: 230px;
+            }
+        }
+    }
+  }

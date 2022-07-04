@@ -1,0 +1,58 @@
+.services-container {
+    width: 100%;
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+
+    & .service {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        & .fa-bell-concierge, .fa-bed, .fa-wifi, .fa-utensils, .fa-car, .fa-bath {
+            font-size: 22px; 
+            color: #222222; 
+            margin-left: 15px 
+        }
+
+        & .fa-check {
+            font-size: 20px; 
+            color: #666a6e; 
+            margin-right: 5px
+        }
+
+        & .title {
+            font-size: 20px;
+        }
+        & .item {
+            color: #666a6e;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        & .service {
+            & .title {
+                font-size: 17.5px;
+            }
+            & .item {
+                color: #666a6e;
+                font-size: 15px;
+            }
+            & .fa-bell-concierge, .fa-bed, .fa-wifi, .fa-utensils, .fa-car, .fa-bath {
+                font-size: 17.5px; 
+            }
+    
+            & .fa-check {
+                font-size: 15px; 
+            }
+        }
+    }
+  }

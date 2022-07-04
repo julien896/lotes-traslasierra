@@ -1,0 +1,116 @@
+.list-container {
+    width: 100%;
+    padding: 40px 30px 40px 30px;
+
+    & .info {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        padding-bottom: 40px;
+
+        & .title {
+            color: $black;
+            font-weight: 600;
+        }
+    }
+
+    & .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+
+    & .card {
+        border-radius: 5px;
+        /* box-shadow: 1px 1px 2px 1px rgba(92, 92, 92, 0.5); */
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+        cursor: pointer;
+        transition: all 0.25s ease-in;
+        border-bottom: 5px solid transparent;
+
+        &:hover {
+            transform: translateY(-5px);
+            border: none;
+            border-bottom: 3px solid $blue;
+
+            & .details {
+                & .second {
+                    & .see {
+                        display: flex !important;
+                        transition: all 1s ease-in-out;
+                    }
+                }
+            }
+
+            & .img {
+                filter: brightness(50%);
+            }
+        }
+
+        & .img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            height: 280px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            & img {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                transition: all 0.25s ease-in;
+            }
+        }
+
+        & .details {
+            width: 100%;
+            padding: 0 20px;
+
+            & .first {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                & .name {
+                    color: $black;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                }
+
+                & .description {
+                    color: $black;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+            }
+    
+            & .second {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 10px;
+                color: $black;
+                & .price {
+                    font-weight: 800;
+                }
+
+                & .meters {
+                    font-weight: 600;
+                    color: $gray-3;
+                }
+                & .see {
+                    display: none;
+                    transition: all 1s ease-in-out;
+                    color: $blue;
+                    background-color: $gray-2;
+                    padding: 0 10px;
+                    font-weight: 600;
+                    /* border: 1px solid $blue; */
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    }
+}

@@ -1,0 +1,29 @@
+
+
+
+         .ant-dropdown-menu-item {
+            min-height: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $black;
+            font-weight: 600 !important;
+
+            &:hover {
+                background-color: rgba(34,34,34,0.25);
+                color: $blue;
+            }
+
+            & a {
+                color: $black !important;
+                font-size: 15px;
+            }
+            & .ant-btn {
+                font-weight: 600;
+                background-color: transparent;
+                border: none !important;
+                padding: 0;
+                color: $blue;
+            }
+        }

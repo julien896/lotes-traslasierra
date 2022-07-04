@@ -1,0 +1,219 @@
+.top-container {
+  box-shadow: 0px 6px 6px 0px #090e250a;
+  width: 100%;
+
+  &.active {
+    background: $blue; 
+    z-index: 11;
+  }
+  &.inactive {
+    background: $blue; 
+    position: inherit !important;
+  }
+  & .Sidebar {
+    display: none;
+  }
+  & .card-body {
+    padding: 10px 60px 10px 30px !important;
+  }
+  & .searchContainer {
+    margin-left: 10px;
+    margin-right: auto;
+  }
+  & .topBar {
+    width: 100% !important;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & .logo {
+      height: 57px;
+      max-width: 340px;
+      cursor: pointer;
+
+      & img {
+        filter: contrast(0.9);
+        border-radius: 3px;
+      }
+      & div {
+        font-size: 25px;
+        color: $gray-2;
+        font-weight: 500;
+
+        & span {
+          font-size: 25px;
+          font-weight: 700;
+        }
+      }
+    }
+    & .nav {
+      margin: 0 auto !important;
+    }
+    & .notificationsBadge {
+      margin-right: 15px;
+    }
+    & .ant-input {
+      height: 33px !important;
+      max-width: 180px;
+      width: 100% !important;
+    }
+    & .ant-input-affix-wrapper {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      height: 35px !important;
+      &:hover {
+        border: 1px solid #39e489 !important;
+      }
+    }
+
+    & .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 0 !important;
+      width: 650px;
+      font-size: 15px !important;
+      font-style: normal !important;
+      font-weight: 500 !important;
+
+      & .call-us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        cursor: pointer;
+
+        & span {
+          margin-left: 10px;
+          color: $gray-2;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+
+          & p {
+            font-weight: 500;
+            margin: 0;
+          }
+        }
+      }
+
+      & .ant-btn {
+        color: white !important;
+        font-size: 16px;
+        transition: all linear 0.3s;
+        font-weight: 600;
+        background-color: transparent;
+        border: none !important;
+        &:hover {
+          transition: all linear 0.3s;
+          transform: scale(1.02);
+          font-weight: 600 !important;
+        }
+
+        &:focus {
+          border: none;
+        }
+      }
+      & .req {
+        color: white !important;
+        transition: all linear 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px !important;
+      }
+      & a {
+        color: white !important;
+        font-size: 16px;
+        transition: all linear 0.3s;
+        font-weight: 600;
+        &:hover {
+          transition: all linear 0.3s;
+          transform: scale(1.02);
+          font-weight: 600 !important;
+        }
+        &.active {
+          transition: all linear 0.3s;
+          font-weight: 700 !important;
+          color: #39e489 !important;
+        }
+      }
+    }
+
+    & .notificationsBadge {
+      height: 40px;
+      width: 50px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      & .ant-badge-count {
+        min-width: 18px !important;
+        max-width: 18px !important;
+        max-height: 18px !important;
+        font-size: 10px !important;
+        display: flex;
+        color: #132c4a;
+        align-items: center;
+        justify-content: center;
+        background: #39e489;
+      }
+    }
+
+    & .avatarBadge {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: auto;
+      & span {
+        font-size: 15px !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        color: #262d42 !important;
+      }
+      & .ant-badge {
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.ant-modal-header{
+  border-bottom: 1px solid #262d42;
+}
+
+.hamburger-container {
+  display: none;
+}
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .hamburger-container {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  .top-container {
+    height: 75px;
+    .topBar {
+      height: 75px;
+      /* justify-content: center; */
+    }
+    & .navHugeScreen {
+    /* & .logo { */
+      display: none !important;
+    }
+        & .logo {
+          display: flex;
+          justify-content: flex-start;
+        }
+  }
+}

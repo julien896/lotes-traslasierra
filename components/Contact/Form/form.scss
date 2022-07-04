@@ -1,0 +1,92 @@
+.contact-form {
+    width: 100%;
+    padding: 20px 0 20px 0;
+
+    & .request {
+        color: #ffda53;
+        font-size: 33px;
+    }
+
+    & .global-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    & .form-container {
+        width: 60%;
+        margin-top: 20px;
+
+        & .ant-input {
+            height: 40px;
+            border-radius: 3px;
+            border-color: $blue;
+            color: $black;
+            font-weight: 600;
+
+            &:hover {
+                border-color: $blue;
+            }
+            &:focus {
+                border-color: $blue;
+                box-shadow: $blue;
+            }
+        }
+
+        & .ant-form-item-label > label {
+            color: $black;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        & .ant-form-item-explain-error {
+            font-weight: 600;
+        }
+
+        & .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+            color: $red !important
+        }
+
+        & textarea {
+            height: 200px !important;
+            margin-bottom: 16px;
+        }
+        & .ant-btn {
+            background-color: $blue;
+            border-radius: 4px;
+            border: 1px solid $blue;
+            color: $gray-1;
+            font-weight: 600;
+            font-size: 18px;
+            height: 40px;
+            width: 200px;
+            transition: all 600ms ease;
+            float: right
+        }
+        & button:hover {
+            background: #08243e;
+            color: $gray-1;
+        }
+    }
+
+    & .image-container {
+
+        width: 50%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        & .container {
+            width: fit-content;
+            height: 360px !important;
+            border-radius: 2px;
+            box-shadow: 1px 3px 5px 1px rgba(34,34,34,0.75);
+            margin-top: 25px;
+
+            & img {
+                border-radius: 2px;
+                max-width: 530px !important;
+                max-height: 360px !important;
+            }
+        }
+    }
+    }
+}

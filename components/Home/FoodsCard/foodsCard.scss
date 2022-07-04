@@ -1,0 +1,89 @@
+.foods-container {
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    & .image {
+        width: 50%;
+
+        & .container {
+            width: fit-content;
+            height: 500px !important;
+            border-radius: 2px;
+            box-shadow: 1px 3px 5px 1px rgba(34,34,34,0.75);
+
+            & img {
+                width: 600px !important;
+                height: 500px !important;
+                border-radius: 2px;
+            }
+        }
+    }
+
+        & .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            padding-left: 30px;
+            padding-right: 30px;
+   
+            & div {
+                display: flex;
+                justify-content: left;
+                width: 100%;
+            }
+   
+            & .us {
+               color: #ffda53;
+               font-size: 25px;
+   
+            }
+   
+            & .description {
+                font-size: 16px;
+                color: #222222;
+            }
+   
+            & .hotel {
+                font-size: 42px;
+                font-weight: 500;
+            }
+        }
+}
+
+@media (max-width: 950px) {
+    .foods-container {
+        flex-direction: column-reverse;
+
+        & .text {
+            width: 100%;
+
+            & div {
+                justify-content: center;
+            }
+            & .us {
+                font-size: 23px;
+    
+             }
+    
+             & .description {
+                text-align: center;
+                font-size: 15px;
+             }
+    
+             & .hotel {
+                 font-size: 32px;
+             }
+        }
+
+        & .image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+  }
