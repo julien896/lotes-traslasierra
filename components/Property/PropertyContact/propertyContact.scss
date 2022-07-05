@@ -3,6 +3,7 @@
     padding: 20px 30px;
     margin-left: 50px;
     min-height: 300px;
+    height: fit-content;
     border: 1px solid $gray-2;
     border-radius: 5px;
 
@@ -25,7 +26,9 @@
     }
 
     & .btn-wrapper {
-        margin-top: 20px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
         & .ant-btn {
             background-color: $blue;
             border-radius: 4px;
@@ -34,7 +37,7 @@
             font-weight: 600;
             font-size: 14px;
             height: 40px;
-            width: 180px;
+            min-width: 180px;
             transition: all 600ms ease;
             float: right;
         }

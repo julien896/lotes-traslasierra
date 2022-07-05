@@ -40,8 +40,8 @@
             height: 55px;
             color: $black;
             border-bottom: 1.5px solid $blue;
-            border-bottom-left-radius: 3px;
-            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
             font-weight: 600;
         }
       }
@@ -60,7 +60,7 @@
 }
 
 .image {
-    animation: blur 5s infinite alternate;
+    animation: blur 5s;
     height: 90vw;
     max-height: 640px;
     max-width: 640px;
@@ -77,7 +77,7 @@
       }
       
       & .invert{
-        animation: mask 5s steps(69) infinite alternate;
+        animation: mask 5s steps(69);
         background-size: cover;
         filter: invert(1.0) grayscale(1.0);
         -webkit-mask: url('/public/assets/3.jpg');

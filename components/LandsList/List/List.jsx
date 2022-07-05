@@ -1,7 +1,7 @@
 import React from 'react';
-import { data } from '@/utils/fake'
+import Link from 'next/link';
 
-const List = () => {
+const List = ({ filteredData }) => {
     return ( 
         <div className='list-container'>
           <div className='info'>
@@ -14,7 +14,8 @@ const List = () => {
             </span>
           </div>
           <div className='list'>
-            {data().map(item => (
+            {filteredData.map(item => (
+              <Link href={`/propiedades/${item.id}`} passHref key={item.id}>
                 <div className='card' key={item.id}>
                     <div className='img' style={{ backgroundImage: `url(${item.img})`}} />
                     <div className='details'>
@@ -29,6 +30,7 @@ const List = () => {
                       </div>  
                     </div>
                 </div>
+              </Link>
             ))}
           </div>
         </div>

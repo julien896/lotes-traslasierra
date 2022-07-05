@@ -10,6 +10,27 @@
         background-size: cover;
         background-repeat: no-repeat;
         padding-right: 50px;
+        border-radius: 2px;
+    }
+    & .awssld__content { 
+        width: 100%;
+        border-radius: 2px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; 
+        height: 450px;
+    }
+
+    & .awssld__bullets {
+        display: none !important;
+    }
+
+    & .awssld__controls__arrow-right, .awssld__controls__arrow-left {
+        height: 25px !important;
+    }
+
+    & .awssld {
+        --organic-arrow-color: white;
     }
 
     & .first-details {
