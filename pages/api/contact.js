@@ -19,7 +19,7 @@ export default function (req, res) {
         text: req.body.message + " | Enviado por: " + req.body.email,
         html: `<div>${req.body.message}</div>
         <p>Desde el correo: ${req.body.email}</p>
-        <p>Telefono: ${req.body.phone}</p>`
+        <p>Teléfono: ${req.body.phone}</p>`
       }
       transporter.sendMail(mailData, (err, info) => {
         if(err)

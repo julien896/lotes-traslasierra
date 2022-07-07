@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { Form, Input, Button } from 'antd';
-import Image from 'next/image'
+import { Modal, Form, Input, Button } from 'antd';
 import axios from 'axios';
-import { notificationSuccess, notificationError } from '@/components/base/Notifications';
+import { notificationError, notificationSuccess } from '@/components/base/Notifications';
 
-const ContactForm = () => {
+const CallModal = ({ modal, showModal }) => {    
+    const reg = new RegExp('^[0-9]*$')
+
     const [form] = Form.useForm()
     const [contactData, setContactData] = useState({
         name: '',
         email: '',
         phone: '',
-        message: ''
+        message: 'Hola, estoy interesado en una propiedad, me gustaría que me llamen. Gracias'
     })
     
     const handleSubmit = () => {
@@ -29,6 +30,7 @@ const ContactForm = () => {
               console.error(e)
             })
             form.resetFields()
+            showModal()
             setContactData({
                 name: '',
                 email: '',
@@ -37,11 +39,20 @@ const ContactForm = () => {
             })
         })
     }
-
     return ( 
-        <div className='contact-form'>
-          <div className='global-container'>
-          <div className='form-container'>
+      <Modal 
+        visible={modal} 
+        onCancel={showModal}
+        footer={[
+            <Button className='submit-btn' key="submit" onClick={() => handleSubmit()}>
+              Confirmar
+            </Button>,
+            <Button className='cancel-btn' key="back" onClick={() => showModal()}>
+              Cancelar
+            </Button>
+        ]}
+      >
+        <div className='modal-form'>
           <Form
             name="basic"
             autoComplete="off"
@@ -59,44 +70,25 @@ const ContactForm = () => {
                 />
             </Form.Item>
             <Form.Item
-              label="Email"
-              name="email"
-              rules={[{ required: true, message: 'Por favor, ingrese un Email válido.', type:'email'}]}
-            >
-                <Input 
-                  value={contactData.email} 
-                  onChange={e => setContactData({ ...contactData, email: e.target.value })}
-                />
-            </Form.Item>
-            <Form.Item
                 label="Teléfono"
                 name="phone"
+                rules={[
+                    { 
+                      required: (!reg.test(contactData.phone)), 
+                      message: 'Por favor, ingrese su teléfono.', 
+                      type: 'string' 
+                    }
+                ]}
             >
                 <Input 
                   value={contactData.phone}
                   onChange={e => setContactData({ ...contactData, phone: e.target.value })} 
                 />
             </Form.Item>
-            <Form.Item
-                label="Mensaje"
-                name="message"
-            >
-                <Input.TextArea 
-                  value={contactData.message}
-                  onChange={e => setContactData({ ...contactData, message: e.target.value })}
-                />
-            </Form.Item>
-            <Button 
-              className='submit-form'
-              onClick={() => handleSubmit()}
-            >
-                Enviar
-            </Button>
           </Form>
-          </div>
-          </div>
         </div>
+      </Modal>
      );
 }
  
-export default ContactForm;
+export default CallModal;

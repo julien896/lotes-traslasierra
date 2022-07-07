@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image'
 import { Button } from 'antd';
 import { WhatsAppOutlined } from '@ant-design/icons';
 
 import logo from '@/public/assets/isotipo.jpg'
 import PropertyForm from './Form/Form';
+import CallModal from './Modal/Modal';
 
 const PropertyContact = () => {
+    const [modal, setModal] = useState(false)
+
+    function showModal() {
+      setModal(!modal)
+    }
+
     return ( 
         <div className='property-contact-container'>
             <div className='logo'>
@@ -30,8 +37,9 @@ const PropertyContact = () => {
                     />
                 </a>
                 </Button>
-                <Button>Quiero que me llamen</Button>
+                <Button onClick={() => showModal()}>Quiero que me llamen</Button>
             </div>
+            <CallModal modal={modal} showModal={showModal} />
             <PropertyForm />
         </div>
      );

@@ -68,7 +68,7 @@ const PropertyForm = () => {
                 />
             </Form.Item>
             <Form.Item
-                label="Telefono"
+                label="Teléfono"
                 name="phone"
             >
                 <Input 
