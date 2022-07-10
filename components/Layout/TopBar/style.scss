@@ -29,11 +29,10 @@
     & .logo {
       height: 57px;
       max-width: 340px;
-      cursor: pointer;
-
       & img {
         filter: contrast(0.9);
         border-radius: 3px;
+        cursor: pointer;
       }
       & div {
         font-size: 25px;
@@ -45,7 +44,12 @@
           font-weight: 700;
         }
       }
+
+      & .exp {
+        display: none;
+      }
     }
+
     & .nav {
       margin: 0 auto !important;
     }
@@ -198,13 +202,29 @@
     width: 50%;
     justify-content: flex-start;
   }
+  .logo {
+  & .logo1 {
+    display: none !important;
+  }
+  & .exp {
+    cursor: pointer;
+    display: flex !important;
+
+    & span {
+      border-radius: 100%;
+    }
+  }  
+  }
   .hamburger-menu {
     display: flex;
   }
   .top-container {
     height: 75px;
+    & .card-body {
+      padding: 10px 30px !important;
+    }
     .topBar {
-      height: 75px;
+      min-height: 45px;
       /* justify-content: center; */
     }
     & .navHugeScreen {

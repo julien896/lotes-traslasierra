@@ -9,3 +9,9 @@ hr {
     margin: 0 30px;
     color: $gray-2;
 }
+
+@media (max-width: 950px) {
+    hr {
+      margin: 0;
+    }   
+}

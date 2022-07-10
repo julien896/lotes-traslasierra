@@ -6,6 +6,7 @@ import { Button } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faSearch } from "@fortawesome/free-solid-svg-icons"
 import logo from '@/public/assets/lotes.jpg'
+import logo2 from '@/public/assets/isotipo.jpg'
 import HamburgerMenu from "@/components/base/HamburgerMenu";
 
 const MainTopBar = () => {
@@ -36,9 +37,13 @@ const MainTopBar = () => {
           </div>
           <div className="logo">
             <Link href="/" passHref>
-              <Image src={logo} alt='' />
-              {/* <div><span>L</span>otes<span> T</span>raslasierra<span>.</span></div> */}
+              <Image className="logo1" src={logo} alt='' />
             </Link>
+            <div className="exp">
+            <Link href="/" passHref>
+              <Image className="logo2" src={logo2} alt='' />
+            </Link>
+            </div>
           </div>
           <div className="nav navHugeScreen">
             <Link
