@@ -97,3 +97,13 @@
         }
     }
   }
+
+  @media (max-width: 760px) {
+    .presentation-container {    
+        & .text {
+            & .hotel {
+                font-size: 26px;
+            }
+        }
+    }
+  } 
