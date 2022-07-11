@@ -14,3 +14,11 @@
             color: #424242;
         }  
 }
+
+@media (max-width: 760px) {
+    .contact-description {    
+        & .title {
+            font-size: 30px;
+        }
+    }
+  } 

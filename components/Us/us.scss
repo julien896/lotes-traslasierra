@@ -109,3 +109,39 @@
     }
   }
 
+  @media (max-width: 950px) {
+    .us-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 50px 30px;
+
+      & .data {
+        width: 100%;
+        margin-left: 0;
+        & .description {
+          text-align: center;
+      }
+        & .img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+        & .logo {
+            width: 70px;
+            height: 70px;
+          }
+
+        & .title {
+            font-size: 33px !important;
+            border-bottom: none !important;
+        }
+      }
+     }
+
+     & .image {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 20px;
+    }   
+  }
+}

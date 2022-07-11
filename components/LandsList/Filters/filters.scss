@@ -66,3 +66,39 @@
       font-weight: 600 !important;
       font-size: 16px;
   }
+
+@media (max-width: 950px) {
+    .filters-container {
+        & .filters {
+            & .ant-select, .ant-select-selector {
+                width: 230px !important;
+        }
+    }
+}
+}
+
+@media (max-width: 750px) {
+    .filters-container {
+        & .filters {
+            & .ant-select, .ant-select-selector {
+                width: 220px !important;
+        }
+    }
+}
+}
+
+@media (max-width: 610px) {
+    .filters-container {
+        & .filters {
+            flex-direction: column;
+
+            & .ant-select, .ant-select-selector {
+                width: 250px !important;
+            }
+
+            & .place {
+                margin-top: 15px;
+            }
+    }
+    }
+}
