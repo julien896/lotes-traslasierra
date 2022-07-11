@@ -18,7 +18,6 @@ export const data = () => {
             Se encuentran inscriptos en la municipalidad de Arroyo de los Patos.
             Aptos para el desarrollo de viviendas o complejo turistico.
             Excelente vista a todo el cordon de las sierras grandes.
-            ${<><br /><br /></>} 
             Cuentan con derechos posesorios.
             Para coordinar una visita o para recibir mayor información no dude en consultar.`,            
             squareMeters: '10m x 25m.',
@@ -44,7 +43,7 @@ export const data = () => {
             description: 'Loteo en Cura Brochero',
             descriptionFull: 
             `Contamos con un desarrollo propio de 50 unidades aptas para el desarrollo de viviendas
-            o complejo. ${<><br /><br /></>} 
+            o complejo.
             El loteo se encuentra a 900m de la plaza de Cura Brochero y cuenta con factibilidad de servicios(agua y luz).
             Disponemos de financiacion propia, entrega 25%, el resto en 36 cuotas.`,
             squareMeters: '15m x 40.5m',

@@ -70,6 +70,7 @@
 @media (max-width: 950px) {
     .filters-container {
         & .filters {
+            justify-content: space-between;
             & .ant-select, .ant-select-selector {
                 width: 230px !important;
         }
@@ -80,6 +81,9 @@
 @media (max-width: 750px) {
     .filters-container {
         & .filters {
+            & .orderBy, .place {
+                width: 42%;
+            }
             & .ant-select, .ant-select-selector {
                 width: 220px !important;
         }
@@ -91,6 +95,9 @@
     .filters-container {
         & .filters {
             flex-direction: column;
+            & .orderBy, .place {
+                width: 50%;
+            }
 
             & .ant-select, .ant-select-selector {
                 width: 250px !important;
